@@ -1,0 +1,54 @@
+#cards {
+        position: relative;
+        top: 0%;
+        width: 100%;
+        height: 40rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 50px;
+    }
+    
+    .card {
+        width: 20rem;
+        height: 50%;
+        overflow: hidden;
+        position: relative; /* Add this to make .Quote position relative to .card */
+    }
+    
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensure the image covers the entire space */
+    }
+    
+    .Quote {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%; /* Change to 100% */
+        height: 100%; /* Change to 100% */
+        background-color: rgba(128, 128, 128, 0.594);
+        opacity: 0;
+        transition: opacity 0.3s;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 2px;
+    }
+    .card:hover .Quote {
+        opacity: 1;
+    }
+    .Quote p {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.877);
+        max-width: 100%; /* Ensure text doesn't exceed the container width */
+        overflow-wrap: break-word; 
+        font-size: 30px;
+    }
